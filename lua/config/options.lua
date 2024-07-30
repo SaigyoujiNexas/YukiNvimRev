@@ -3,3 +3,5 @@
 -- Add any additional options here
 --
 local opt = vim.opt
+
+opt.confirm = false

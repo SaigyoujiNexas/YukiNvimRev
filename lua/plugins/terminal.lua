@@ -1,19 +1,39 @@
 return {
-  {
-    "akinsho/toggleterm.nvim",
-    version = "*",
-    opts = function()
-      -- vim.keymap.del({ "n", "t", "i" }, "<c-/>")
-      return {
-        open_mapping = { [[<c-/>]] },
-        insert_mappings = true,
-        terminal_mappings = true,
-        direction = "float",
-        close_on_exit = true,
-        winbar = {
-          enabled = true,
+    {
+        "akinsho/toggleterm.nvim",
+        version = "*",
+        cmd = { "ToggleTerm" },
+        keys = {
+            {
+                "<C-/>",
+                function()
+                    local count = vim.v.count1
+                    require("toggleterm").toggle(count, 0, LazyVim.root.get(), "float", "YukiTerm")
+                end,
+                desc = "ToggleTerm",
+                mode = { "n", "t", "i" },
+            },
+            {
+                "<C-_>",
+                function()
+                    local count = vim.v.count1
+                    require("toggleterm").toggle(count, 0, LazyVim.root.get(), "float", "YukiTerm")
+                end,
+                desc = "ToggleTerm",
+                mode = { "n", "t", "i" },
+            },
         },
-      }
-    end,
-  },
+        opts = function()
+            return {
+                open_mapping = { [[<C-/>]], [[<C-_>]] },
+                insert_mappings = true,
+                terminal_mappings = true,
+                direction = "float",
+                close_on_exit = true,
+                winbar = {
+                    enabled = true,
+                },
+            }
+        end,
+    },
 }

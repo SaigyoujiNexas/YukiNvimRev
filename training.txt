@@ -1,0 +1,12 @@
+------Status-------
+Your next Task: Move to the end of the current line.
+Successes: 8, Failures: 3
+Current Streak: 6 Your best Streak: 6
+--------------
+---------------------------------------------------------------------- 
+
+
+at non proident, sunt in culpa qui officia deserunt mollit anim id est 
+
+
+ ----------------------------------------------------------------------
